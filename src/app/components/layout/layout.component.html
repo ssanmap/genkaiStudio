@@ -1,0 +1,42 @@
+  <div class="container-fluid p-6 text-center  w-100 pt-4 h-300">
+    <div class="row">
+      <div class="col-12">
+        <h1 class="text-center">Creador de Formulario</h1>
+        <hr>
+      </div>
+    </div>
+    <div class="row text-center  w-50 align-self-center mx-auto" >
+
+      <div class="col-11">
+
+        <input type="text" class="w-100" placeholder="Campo de texto">
+      </div>
+      <div class="col-1">
+        <button class="btn btn-secondary" (click)="anadeOther()">Añadir otro +</button>
+
+      </div>
+    </div>
+    <hr>
+    <div class="row w-75 mx-auto mt-3">
+      <div class="col-12 text-center mx-auto" *ngIf="nameList.length < 1">
+        <h1 class="text-center mx-auto">No hay elementos que mostrar !!</h1>
+      </div>
+    <table class="w-100 tableList"
+    >
+    <tr *ngFor="let item of nameList ; let index = index">
+      <td class="font-bold">{{'# ' + index}}</td>
+      <td class="p-2">
+        <input type="text" class="form-control w-90" [(ngModel)]="item.name"/>
+      </td>
+      <td class="p-2">
+        <input type="text" class="form-control w-90" [(ngModel)]="item.age"/>
+      </td>
+      <td><button class="btn btn-danger" (click)="btnDelete(index)" >Eliminar</button></td>
+    </tr>
+    </table>
+    <div class="bt-sss mt-3">
+
+      <button class="btn btn-primary" (click)="btnSend()">Enviar</button>
+    </div>
+    </div>
+  </div>

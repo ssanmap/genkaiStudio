@@ -1,0 +1,13 @@
+.tableList tr{
+  margin-bottom: 10px;
+}
+
+table {
+  border-collapse:separate;
+  border-spacing: 0 1em;
+}
+
+td{
+  padding-bottom: 10px;
+  padding-top: 10px;
+}
